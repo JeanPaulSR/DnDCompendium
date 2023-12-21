@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CompendiumLibrary.src.Feats
 {
-    internal class FeatModel
+    public class FeatModel
     {
         /// <summary>
         /// The name of the feat

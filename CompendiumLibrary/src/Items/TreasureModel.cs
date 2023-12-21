@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CompendiumLibrary.src.Items
 {
-    internal class TreasureModel : ItemModel
+    public class TreasureModel : ItemModel
     {
     }
 }

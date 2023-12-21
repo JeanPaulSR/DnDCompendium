@@ -11,7 +11,7 @@ namespace CompendiumLibrary.src.UniversalTraits
     /// Strength, Dexterity, Constitution,
     /// Intelligence, Wisdom, Charisma
     /// </summary>
-    internal enum Abilities
+    public enum Abilities
     {
         Strength,
         Dexterity,

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CompendiumLibrary.src.Items
 {
-    internal class VehicleModel
+    public class VehicleModel
     {
         /// <summary>
         /// The type of the Vehicle
@@ -14,8 +14,8 @@ namespace CompendiumLibrary.src.Items
         public VehicleType VehicleType { get; set; }
     }
 
-    internal class VehicleType { }
-    internal class Land : VehicleType { }
-    internal class Air : VehicleType { }
-    internal class Water : VehicleType { }
+    public class VehicleType { }
+    public class Land : VehicleType { }
+    public class Air : VehicleType { }
+    public class Water : VehicleType { }
 }

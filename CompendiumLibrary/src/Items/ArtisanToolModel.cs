@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CompendiumLibrary.src.Items
 {
-    internal class ArtisanToolModel
+    public class ArtisanToolModel
     {
     }
 }

@@ -7,7 +7,7 @@ using CompendiumLibrary.src.Spells;
 
 namespace CompendiumLibrary.src.Items
 {
-    internal class ItemModel
+    public class ItemModel
     {
         /// <summary>
         /// The item name

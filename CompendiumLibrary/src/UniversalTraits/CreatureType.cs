@@ -9,7 +9,7 @@ namespace CompendiumLibrary.src.UniversalTraits
     /// <summary>
     /// The different creature types in dnd
     /// </summary>
-    internal enum CreatureType
+    public enum CreatureType
     {
         Aberration,
         Beast,

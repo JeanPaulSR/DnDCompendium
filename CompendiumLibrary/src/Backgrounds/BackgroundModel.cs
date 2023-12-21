@@ -8,7 +8,7 @@ using CompendiumLibrary.src.UniversalTraits;
 
 namespace CompendiumLibrary.src.Backgrounds
 {
-    internal class BackgroundModel
+    public class BackgroundModel
     {
         /// <summary>
         /// The name of the background

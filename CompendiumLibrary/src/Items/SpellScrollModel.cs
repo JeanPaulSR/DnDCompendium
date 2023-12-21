@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CompendiumLibrary.src.Items
 {
-    internal class SpellScrollModel
+    public class SpellScrollModel
     {
         /// <summary>
         /// The level of the spell contained within the spell scroll

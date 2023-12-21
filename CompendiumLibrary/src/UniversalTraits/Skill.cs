@@ -15,7 +15,7 @@ namespace CompendiumLibrary.src.UniversalTraits
     /// Performance, Persuasion, Religion, Sleight of Hand,
     /// Stealth, Survival
     /// </summary>
-    internal enum Skill
+    public enum Skill
     {
         Acrobatics,
         AnimalHandling,

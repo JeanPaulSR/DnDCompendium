@@ -9,7 +9,7 @@ namespace CompendiumLibrary.src.UniversalTraits
     /// <summary>
     /// Creatures sizes: Tiny, Small, Medium, Large, Huge, Gragantuan or Varies
     /// </summary>
-    internal enum CreatureSize
+    public enum CreatureSize
     {
         Tiny,
         Small,

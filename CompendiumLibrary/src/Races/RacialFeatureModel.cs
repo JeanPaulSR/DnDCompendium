@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CompendiumLibrary.src.Races
 {
-    internal class RacialFeatureModel
+    public class RacialFeatureModel
     {
         /// <summary>
         /// Feature Name

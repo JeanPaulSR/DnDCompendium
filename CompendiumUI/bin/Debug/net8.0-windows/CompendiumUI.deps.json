@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "CompendiumUI/1.0.0": {
+        "dependencies": {
+          "CompendiumLibrary": "1.0.0"
+        },
+        "runtime": {
+          "CompendiumUI.dll": {}
+        }
+      },
+      "CompendiumLibrary/1.0.0": {
+        "runtime": {
+          "CompendiumLibrary.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "CompendiumUI/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CompendiumLibrary/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

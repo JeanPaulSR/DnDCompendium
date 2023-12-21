@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CompendiumLibrary.src
 {
-    internal class Source
+    public class Source
     {
         /// <summary>
         /// Name of the source

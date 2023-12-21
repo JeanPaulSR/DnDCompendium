@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CompendiumLibrary.src.Items
 {
-    internal class ArmorTypeModel
+    public class ArmorTypeModel
     {
         /// <summary>
         /// The name of the armor type

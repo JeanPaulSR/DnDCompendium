@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CompendiumLibrary.src.Classes
 {
-    internal class ScalingModel
+    public class ScalingModel
     {
         /// <summary>
         /// Name of the scaling resource
@@ -21,8 +21,8 @@ namespace CompendiumLibrary.src.Classes
         /// <summary>
         /// Map of the assigned scaling for each level
         /// </summary>
-        public Dictionary<int, string> Scaling = new(20);
+        private Dictionary<int, string> Scaling = new(20);
 
-
+        public Dictionary<int, string> GetScaling() { return Scaling; }
     }
 }

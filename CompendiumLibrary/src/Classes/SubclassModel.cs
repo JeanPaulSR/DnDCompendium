@@ -7,7 +7,7 @@ using CompendiumLibrary.src.Spells;
 
 namespace CompendiumLibrary.src.Classes
 {
-    internal class SubclassModel
+    public class SubclassModel
     {
         /// <summary>
         /// Subclass Name

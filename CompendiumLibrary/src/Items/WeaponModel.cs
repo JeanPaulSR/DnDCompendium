@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CompendiumLibrary.src.Items
 {
-    internal class WeaponModel : ItemModel
+    public class WeaponModel : ItemModel
     {
         /// <summary>
         /// If the weapon is a melee weapon (false)
@@ -39,9 +39,26 @@ namespace CompendiumLibrary.src.Items
         /// </summary>
         public List<WeaponPropertiesModel> WeaponProperties = [];
 
-        /// <summary>
-        /// The description of the weapon 
-        /// </summary>
-        public string Description { get; set; }
+        public WeaponModel(string name, bool attunement, string rarity, 
+            int weight, int cost, int charges, string recovery, string description, 
+            bool isRanged, string range, string damageDice, string alternateDamageDice,
+            string damageType, List<WeaponPropertiesModel> weaponProperties
+            )
+        {
+            IsRanged = isRanged;
+            Range = range;
+            DamageDice = damageDice;
+            AlternateDamageDice = alternateDamageDice;
+            DamageType = damageType;
+            WeaponProperties = weaponProperties;
+            Name = name;
+            Attunement = attunement;
+            Rarity = rarity;
+            Weight = weight;
+            Cost = cost;
+            Charges = charges;
+            Recovery = recovery;
+            Description = description;
+        }
     }
 }

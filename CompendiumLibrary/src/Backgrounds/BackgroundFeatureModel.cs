@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CompendiumLibrary.src.Backgrounds
 {
-    internal class BackgroundFeatureModel
+    public class BackgroundFeatureModel
     {
         /// <summary>
         /// Feature Name

@@ -7,7 +7,7 @@ using CompendiumLibrary.src.UniversalTraits;
 
 namespace CompendiumLibrary.src.Races
 {
-    internal class RaceModel
+    public class RaceModel
     { 
         /// <summary>
         /// The name of the race

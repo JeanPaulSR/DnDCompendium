@@ -1,0 +1,12 @@
+D:\Practice\DnDCompendium\CompendiumLibrary\obj\Debug\net8.0\CompendiumLibrary.GeneratedMSBuildEditorConfig.editorconfig
+D:\Practice\DnDCompendium\CompendiumLibrary\obj\Debug\net8.0\CompendiumLibrary.AssemblyInfoInputs.cache
+D:\Practice\DnDCompendium\CompendiumLibrary\obj\Debug\net8.0\CompendiumLibrary.AssemblyInfo.cs
+D:\Practice\DnDCompendium\CompendiumLibrary\obj\Debug\net8.0\CompendiumLibrary.csproj.CoreCompileInputs.cache
+D:\Practice\DnDCompendium\CompendiumLibrary\obj\Debug\net8.0\CompendiumLibrary.sourcelink.json
+D:\Practice\DnDCompendium\CompendiumLibrary\bin\Debug\net8.0\CompendiumLibrary.deps.json
+D:\Practice\DnDCompendium\CompendiumLibrary\bin\Debug\net8.0\CompendiumLibrary.dll
+D:\Practice\DnDCompendium\CompendiumLibrary\bin\Debug\net8.0\CompendiumLibrary.pdb
+D:\Practice\DnDCompendium\CompendiumLibrary\obj\Debug\net8.0\CompendiumLibrary.dll
+D:\Practice\DnDCompendium\CompendiumLibrary\obj\Debug\net8.0\refint\CompendiumLibrary.dll
+D:\Practice\DnDCompendium\CompendiumLibrary\obj\Debug\net8.0\CompendiumLibrary.pdb
+D:\Practice\DnDCompendium\CompendiumLibrary\obj\Debug\net8.0\ref\CompendiumLibrary.dll

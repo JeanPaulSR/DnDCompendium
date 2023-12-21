@@ -10,7 +10,7 @@ using CompendiumLibrary.src.Spells;
 
 namespace CompendiumLibrary
 {
-    internal class ClassModel
+    public class ClassModel
     {
         /// <summary>
         /// Class Name
@@ -65,18 +65,21 @@ namespace CompendiumLibrary
         /// <summary>
         /// Map of the features assigned for each level
         /// </summary>
-        public Dictionary<int, List<ClassFeatureModel>> Features = new(20);
+        private Dictionary<int, List<ClassFeatureModel>> Features = new(20);
+        public Dictionary<int, List<ClassFeatureModel>> GetFeatures () { return Features; }
 
         /// <summary>
         /// Boolean to determin whether the class has any manner of 
         /// spellcasting
         /// </summary>
-        public bool HasSpellCasting { get; set; }
+        private bool HasSpellCasting { get; set; }
+        public bool HasSpellCastingCheck() { return HasSpellCasting; }
 
         /// <summary>
         /// Spellcasting scaling for the class
         /// </summary>
-        public SpellCastingModel SpellCasting { get; set; }
+        private SpellCastingModel SpellCasting { get; set; }
+        public SpellCastingModel GetSpellCasting () { return SpellCasting; }
 
         /// <summary>
         /// Map of the spells avaible for each level. The Map 0 is used for cantrips
@@ -86,13 +89,38 @@ namespace CompendiumLibrary
         /// <summary>
         /// Scaling features of the class
         /// </summary>
-        public List<ScalingModel> Scalings = [];
+        private List<ScalingModel> Scalings = [];
+
+        public List<ScalingModel> GetScalings() { return Scalings; }
 
         /// <summary>
         /// Description of the class
         /// </summary>
         public string Description = string.Empty;
 
-
+        public ClassModel(string name, Source source, int classId, string hitDice,
+            ProficiencyModel prof, MulticlassModel multiClass, List<int> subclassLevels,
+            List<SubclassModel> subclasses, List<int> compendiums, List<List<string>> equipment,
+            Dictionary<int, List<ClassFeatureModel>> features, bool hasSpellCasting,
+            SpellCastingModel spellCasting, Dictionary<int, List<SpellModel>> spellList,
+            List<ScalingModel> scalings, string description)
+        {
+            Name = name;
+            Source = source;
+            ClassId = classId;
+            HitDice = hitDice;
+            Proficiency = prof;
+            Mullticlass = multiClass;
+            SubclassFeatureLevels = subclassLevels;
+            Subclasses = subclasses;
+            CompendiumId = compendiums;
+            Equipment = equipment;
+            Features = features;
+            HasSpellCasting = hasSpellCasting;
+            SpellCasting = spellCasting;
+            SpellList = spellList;
+            Scalings = scalings;
+            Description = description;
+        }
     }
 }

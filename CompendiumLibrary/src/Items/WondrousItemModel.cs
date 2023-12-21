@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CompendiumLibrary.src.Items
 {
-    internal class WondrousItemModel : ItemModel
+    public class WondrousItemModel : ItemModel
     {
         /// <summary>
         /// Whether the item is an instrument (true) or not (false)

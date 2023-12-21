@@ -8,7 +8,7 @@ using CompendiumLibrary.src.UniversalTraits;
 
 namespace CompendiumLibrary.Classes
 {
-    internal class ProficiencyModel
+    public class ProficiencyModel
     {
         /// <summary>
         /// Whether skills can be chosen (true)
@@ -72,6 +72,24 @@ namespace CompendiumLibrary.Classes
         /// </summary>
         public List<LanguageModel> LanguageProficiencies = [];
 
-
+        public ProficiencyModel(bool chooseSkills, int chooseSkillsNumber,
+            List<Skill> skillsList, bool chooseSavingThrows, int chooseSavingThrowsNumber,
+            List<Abilities> savesList, List<Abilities> chooseSavesList,
+            List<WeaponTypeModel> weaponProficiencies, List<ArmorTypeModel> armorProficiencies,
+            List<ToolModel> toolProficiencies, List<LanguageModel> languageProficiencies
+        )
+        {
+            ChooseSkills = chooseSkills;
+            ChooseSkillsNumber = chooseSkillsNumber;
+            SkillsList = skillsList;
+            ChooseSavingThrows = chooseSavingThrows;
+            ChooseSavingThrowsNumber = chooseSavingThrowsNumber;
+            SavesList = savesList;
+            ChooseSavesList = chooseSavesList;
+            WeaponProficiencies = weaponProficiencies;
+            ArmorProficiencies = armorProficiencies;
+            ToolProficiencies = toolProficiencies;
+            LanguageProficiencies = languageProficiencies;
+        }
     }
 }

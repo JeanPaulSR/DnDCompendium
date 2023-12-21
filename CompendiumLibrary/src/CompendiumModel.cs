@@ -13,7 +13,7 @@ using CompendiumLibrary.src.Spells;
 
 namespace CompendiumLibrary.src
 {
-    internal class CompendiumModel
+    public class CompendiumModel
     {
         /// <summary>
         /// The Compendium ID

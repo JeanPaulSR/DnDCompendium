@@ -6,21 +6,28 @@ using System.Threading.Tasks;
 
 namespace CompendiumLibrary.src.Items
 {
-    internal class WeaponTypeModel
+    public class WeaponTypeModel
     {
+        public WeaponTypeModel(string name, int weaponTypeId, string description)
+        {
+            Name = name;
+            WeaponTypeId = weaponTypeId;
+            Description = description;
+        }
+
         /// <summary>
-        /// The name of the armor type
+        /// The name of the weapon type
         /// </summary>
         public string Name { get; set; }
 
         /// <summary>
-        /// The id of the armor type
+        /// The id of the weapon type
         /// </summary>
-        public int ArmorTypeId { get; set; }
+        public int WeaponTypeId { get; set; }
 
 
         /// <summary>
-        /// The description of the armor type
+        /// The description of the weapon type
         /// </summary>
         public string Description { get; set; }
     }

@@ -6,8 +6,21 @@ using System.Threading.Tasks;
 
 namespace CompendiumLibrary.src.Classes
 {
-    internal class SpellCastingModel
+    public class SpellCastingModel
     {
+        public SpellCastingModel(string name, int spellCastingId, 
+            bool pactMagic, Dictionary<int, int[]> spellSlots, 
+            Dictionary<int, int> cantripProjection, 
+            Dictionary<int, int> spellsKnown)
+        {
+            Name = name;
+            SpellCastingId = spellCastingId;
+            PactMagic = pactMagic;
+            SpellSlots = spellSlots;
+            CantripProjection = cantripProjection;
+            SpellsKnown = spellsKnown;
+        }
+
         /// <summary>
         /// Name of the spellcasting style
         /// </summary>
@@ -31,6 +44,22 @@ namespace CompendiumLibrary.src.Classes
         /// </summary>
         public Dictionary<int, int[]> SpellSlots = new(20);
 
+        public string GetSpellSlots(int level)
+        {
+            string spells = "";
+            int[] slots = SpellSlots[level];
+            for (int i = 0; i < slots.Length; i++)
+            {
+                if (slots[i] == 0)
+                    spells += "-";
+                else
+                    spells += slots[i].ToString();
+                if (i < slots.Length - 1)
+                    spells += " ";
+            }
+            return spells;
+        }
+
         /// <summary>
         /// A dictionary which assigns each class level the cantrips known
         /// at each level. Can just check last level for any cantrips
@@ -42,5 +71,7 @@ namespace CompendiumLibrary.src.Classes
         /// at each level
         /// </summary>
         public Dictionary<int, int> SpellsKnown = new(20);
+
+        
     }
 }

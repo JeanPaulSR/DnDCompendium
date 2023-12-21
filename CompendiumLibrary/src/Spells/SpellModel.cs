@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CompendiumLibrary.src.Spells
 {
-    internal class SpellModel
+    public class SpellModel
     {
         /// <summary>
         /// The name of the spell

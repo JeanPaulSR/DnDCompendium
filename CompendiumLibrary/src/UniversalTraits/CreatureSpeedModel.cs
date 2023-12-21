@@ -10,7 +10,7 @@ namespace CompendiumLibrary.src.UniversalTraits
     /// A creature's speed, which consists of
     /// Burrow, Climb, Fly, Hover, Swim and Walk
     /// </summary>
-    internal class CreatureSpeedModel
+    public class CreatureSpeedModel
     {
         /// <summary>
         /// A creature's burrow speed

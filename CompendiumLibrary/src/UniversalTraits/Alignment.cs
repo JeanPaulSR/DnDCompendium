@@ -10,17 +10,17 @@ namespace CompendiumLibrary.src.UniversalTraits
     /// The Alignments within dnd. Lawful, Neutral and Chaotic combined with
     /// Good, Neutral and Evil or Unaligned
     /// </summary>
-    internal enum Alignment
+    public enum Alignment
     {
-        Lawful Good,
-        Lawful Neutral,
-        Lawful Evil,
-        Neutral Good,
-        True Neutral,
-        Neutral Evil,
-        Chaotic Good,
-        Chaotic Neutral,
-        Chaotic Evil,
+        Lawful ,
+        LawfulNeutral,
+        LawfulEvil,
+        NeutralGood,
+        TrueNeutral,
+        NeutralEvil,
+        ChaoticGood,
+        ChaoticNeutral,
+        ChaoticEvil,
         Unaligned,
     }
 }

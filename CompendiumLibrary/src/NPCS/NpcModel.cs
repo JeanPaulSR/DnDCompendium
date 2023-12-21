@@ -7,7 +7,7 @@ using CompendiumLibrary.src.UniversalTraits;
 
 namespace CompendiumLibrary.src.NPCS
 {
-    internal class NpcModel
+    public class NpcModel
     {
         /// <summary>
         /// The name of the NPC

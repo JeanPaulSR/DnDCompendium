@@ -17,10 +17,5 @@ namespace CompendiumLibrary.src.Items
         /// The properties of the armor
         /// </summary>
         public List<ArmorPropertiesModel> ArmorProperties = [];
-
-        /// <summary>
-        /// The description of the armor
-        /// </summary>
-        public string Description { get; set; }
     }
 }

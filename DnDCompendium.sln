@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompendiumLibrary", "CompendiumLibrary\CompendiumLibrary.csproj", "{F2784335-48CD-4943-861C-1BE702511743}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CompendiumLibrary", "CompendiumLibrary\CompendiumLibrary.csproj", "{F2784335-48CD-4943-861C-1BE702511743}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompendiumUI", "CompendiumUI\CompendiumUI.csproj", "{FCB3223A-29A2-4C8D-8C72-59707EE8F42C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{F2784335-48CD-4943-861C-1BE702511743}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F2784335-48CD-4943-861C-1BE702511743}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F2784335-48CD-4943-861C-1BE702511743}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FCB3223A-29A2-4C8D-8C72-59707EE8F42C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCB3223A-29A2-4C8D-8C72-59707EE8F42C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCB3223A-29A2-4C8D-8C72-59707EE8F42C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCB3223A-29A2-4C8D-8C72-59707EE8F42C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

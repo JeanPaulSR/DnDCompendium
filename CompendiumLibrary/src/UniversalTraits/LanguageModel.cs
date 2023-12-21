@@ -10,7 +10,7 @@ namespace CompendiumLibrary.src.UniversalTraits
     /// Languages are divided into Common, Exotic and Special for
     /// their rarity.
     /// </summary>
-    internal class LanguageModel
+    public class LanguageModel
     {
         /// <summary>
         /// The type of language, common or exotic
@@ -27,7 +27,7 @@ namespace CompendiumLibrary.src.UniversalTraits
     /// The different language types, common and exotic. As well
     /// as special if it does not fall into either one
     /// </summary>
-    internal enum LanguageType
+    public enum LanguageType
     {
         Common,
         Exotic,

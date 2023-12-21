@@ -6,8 +6,16 @@ using System.Threading.Tasks;
 
 namespace CompendiumLibrary.src.Items
 {
-    internal class WeaponPropertiesModel
+    public class WeaponPropertiesModel
     {
+        public WeaponPropertiesModel(string name, int weaponPropertyId, Source source, string description)
+        {
+            Name = name;
+            WeaponPropertyId = weaponPropertyId;
+            Source = source;
+            Description = description;
+        }
+
         /// <summary>
         /// The name of the weapon property
         /// </summary>
