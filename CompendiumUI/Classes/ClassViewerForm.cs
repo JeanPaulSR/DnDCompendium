@@ -12,6 +12,10 @@ using CompendiumLibrary.src.Items;
 using CompendiumLibrary.src.UniversalTraits;
 using CompendiumLibrary;
 using CompendiumLibrary.Classes;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using static System.Windows.Forms.LinkLabel;
+using System.Reflection.Emit;
+using System.Diagnostics;
 
 namespace CompendiumUI.Classes
 {
@@ -24,15 +28,19 @@ namespace CompendiumUI.Classes
             ClassModel classModel = CreateClassTestModel();
             PopulateDataGridView(classModel);
             ClassTableGridView.Height = 528;
+            this.AutoSize = false;
 
-            // Set the location of the label below the DataGridView
-            ClassViewerName.Location = new Point(ClassTableGridView.Left, ClassTableGridView.Bottom + 10);
+            this.Text = classModel.GetName();
+            PopulateClassInformation(classModel);
+            this.AutoScroll = true;
 
-            // Add the label to the form's controls
-            Controls.Add(ClassViewerName);
-            ClassViewerName.Text = "Wizard";
+            this.Resize += ClassViewerForm_Resize;
         }
-
+        private void ClassViewerForm_Resize(object sender, EventArgs e)
+        {
+            // Handle form resize event to update the TextBox height
+            SetTextBoxHeightBasedOnText(ClassBaseStructure1);
+        }
 
         private void PopulateDataGridView(ClassModel classModel)
         {
@@ -100,21 +108,8 @@ namespace CompendiumUI.Classes
             }
             int totalHeight = ClassTableGridView.ColumnHeadersHeight;
 
-            System.Diagnostics.Debug.WriteLine(totalHeight);
-            totalHeight = 0;
-            int i = 0;
-            foreach (DataGridViewRow row in ClassTableGridView.Rows)
-            {
-                System.Diagnostics.Debug.WriteLine(++i);
-                if (row.Visible)
-                {
-                    totalHeight += row.Height;
-                }
-            }
-
-            System.Diagnostics.Debug.WriteLine(totalHeight);
             ClassTableGridView.AllowUserToAddRows = false;
-            //ClassTableGridView.BorderStyle = BorderStyle.None;
+            ClassTableGridView.BorderStyle = BorderStyle.None;
 
             ClassTableGridView.AutoSize = false;
             ClassTableGridView.Anchor = AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Top;
@@ -150,7 +145,6 @@ namespace CompendiumUI.Classes
             return data;
         }
 
-
         private int GetProficiencyBonus(int level)
         {
             return level switch
@@ -162,6 +156,50 @@ namespace CompendiumUI.Classes
                 17 or 18 or 19 or 20 => 6,
                 _ => throw new IndexOutOfRangeException(),
             };
+        }
+
+
+
+        private void PopulateClassInformation(ClassModel classModel)
+        {
+            // Set the location of the label below the DataGridView
+            ClassViewerName.Location = new Point(ClassTableGridView.Left, ClassTableGridView.Bottom + 10);
+            ClassViewerName.Top = ClassTableGridView.Bottom + 10;
+            ClassViewerName.Text = classModel.GetName();
+
+            ClassBaseStructure1.Location = new System.Drawing.Point(ClassViewerName.Left, ClassViewerName.Bottom + 10);
+            ClassBaseStructure1.Anchor = AnchorStyles.Left | AnchorStyles.Top | AnchorStyles.Right;
+            ClassBaseStructure1.Multiline = true;
+            ClassBaseStructure1.WordWrap = true;
+            ClassBaseStructure1.AutoSize = true;
+            string descriptiontext = "As a " + classModel.GetName() + ", you gain the following class features."+
+                "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n";
+            string formattedText = descriptiontext.Replace("\n", "\r\n");
+            ClassBaseStructure1.Text = formattedText;
+            ClassBaseStructure1.BorderStyle = BorderStyle.None;
+
+            SetTextBoxHeightBasedOnText(ClassBaseStructure1);
+            ClassBaseStructure1.ScrollBars = ScrollBars.None;
+        }
+
+        private void SetTextBoxHeightBasedOnText(System.Windows.Forms.TextBox textBox)
+        {
+            int textWidth = this.Width - (textBox.Padding.Left + textBox.Padding.Right);
+            int lineCount = GetLineCount(textBox.Text, textBox.Font, textWidth) + 1;
+
+            // Calculate the new height based on the number of lines
+            int lineHeight = TextRenderer.MeasureText("SampleText", textBox.Font).Height; // Get the height of a single line
+            int newHeight = lineHeight * lineCount;
+
+            // Set the TextBox height to the new height
+            textBox.Height = newHeight + 7;
+        }
+
+        private int GetLineCount(string text, Font font, int width)
+        {
+            // Calculate the number of lines based on the text, font, and width
+            Size textSize = TextRenderer.MeasureText(text, font, new Size(width, int.MaxValue), TextFormatFlags.WordBreak);
+            return textSize.Height / font.Height;
         }
 
         //Testing Model
@@ -285,11 +323,6 @@ namespace CompendiumUI.Classes
             new List<int> { 2, 6, 10, 14 }, null, null, equipmentOptions, features,
             true, spellCasting, null, null, "Wizards are supreme magic-users, defined and united as a class by the spells they cast. Drawing on the subtle weave of magic that permeates the cosmos, wizards cast spells of explosive fire, arcing lightning, subtle deception, brute-force mind control, and much more.");
             return Testing;
-        }
-
-        private void splitContainer1_Panel2_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }

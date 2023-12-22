@@ -39,6 +39,7 @@ namespace CompendiumUI.Classes
         {
             ClassTableGridView = new DataGridView();
             ClassViewerName = new Label();
+            ClassBaseStructure1 = new TextBox();
             ((System.ComponentModel.ISupportInitialize)ClassTableGridView).BeginInit();
             SuspendLayout();
             // 
@@ -69,6 +70,16 @@ namespace CompendiumUI.Classes
             ClassViewerName.TabIndex = 1;
             ClassViewerName.Text = "Class";
             // 
+            // ClassBaseStructure1
+            // 
+            ClassBaseStructure1.BackColor = SystemColors.ControlDark;
+            ClassBaseStructure1.Location = new Point(13, 577);
+            ClassBaseStructure1.Multiline = true;
+            ClassBaseStructure1.Name = "ClassBaseStructure1";
+            ClassBaseStructure1.Size = new Size(779, 69);
+            ClassBaseStructure1.TabIndex = 3;
+            ClassBaseStructure1.Text = "ClassBaseStructure1";
+            // 
             // ClassViewerForm
             // 
             AutoScaleDimensions = new SizeF(10F, 18F);
@@ -76,10 +87,12 @@ namespace CompendiumUI.Classes
             AutoScroll = true;
             BackColor = SystemColors.ControlDark;
             ClientSize = new Size(804, 766);
+            Controls.Add(ClassBaseStructure1);
             Controls.Add(ClassViewerName);
             Controls.Add(ClassTableGridView);
             Font = new Font("Verdana", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Margin = new Padding(4);
+            MinimumSize = new Size(820, 805);
             Name = "ClassViewerForm";
             Text = "ClassViewerForm";
             ((System.ComponentModel.ISupportInitialize)ClassTableGridView).EndInit();
@@ -91,6 +104,8 @@ namespace CompendiumUI.Classes
 
         private DataGridView ClassTableGridView;
         private Label ClassViewerName;
+        private Label classBaseStructure1;
+        private TextBox ClassBaseStructure1;
     }
 
 }

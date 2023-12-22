@@ -15,8 +15,8 @@ namespace CompendiumLibrary
         /// <summary>
         /// Class Name
         /// </summary>
-        public string Name { get; set; } = string.Empty;
-
+        private string Name { get; set; } = string.Empty;
+        public string GetName () { return Name; }
         /// <summary>
         /// The class's source
         /// </summary>

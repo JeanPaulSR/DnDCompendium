@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CompendiumLibrary")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b086099848e9821759369d306bd2f3007ce5d093")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+96ad5b9d4d09d75315d1c8012e8ba4fd97a2ad97")]
 [assembly: System.Reflection.AssemblyProductAttribute("CompendiumLibrary")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CompendiumLibrary")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
