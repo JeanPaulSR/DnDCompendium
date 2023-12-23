@@ -74,13 +74,21 @@ namespace CompendiumLibrary
         /// </summary>
         private bool HasSpellCasting { get; set; }
         public bool HasSpellCastingCheck() { return HasSpellCasting; }
+        public bool LearnedSpellcasting() { return SpellCasting.IsLearned(); }
 
         /// <summary>
         /// Spellcasting scaling for the class
         /// </summary>
         private SpellCastingModel SpellCasting { get; set; }
         public SpellCastingModel GetSpellCasting () { return SpellCasting; }
-
+        public bool IsPactMagic()
+        {
+            return SpellCasting.IsPactMagic();
+        }
+        public bool HasCantrips()
+        {
+            return SpellCasting.HasCantrips();
+        }
         /// <summary>
         /// Map of the spells avaible for each level. The Map 0 is used for cantrips
         /// </summary>

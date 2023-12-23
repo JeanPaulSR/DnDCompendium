@@ -32,10 +32,31 @@ namespace CompendiumLibrary.src.Classes
         public int SpellCastingId { get; set; }
 
         /// <summary>
+        /// Whether the spellcasting type learned or prepared
+        /// or not
+        /// </summary>
+        public bool IsLearned()
+        {
+            return SpellsKnown.Count > 0;
+        }
+
+
+        /// <summary>
+        /// A dictionary which assigns each class level the spells known
+        /// at each level
+        /// </summary>
+        public Dictionary<int, int> SpellsKnown = new(20);
+
+        /// <summary>
         /// Whether the spellcasting type is pactMagic (true)
         /// or not
         /// </summary>
-        public bool PactMagic { get; set; }
+        private bool PactMagic { get; set; }
+
+        public bool IsPactMagic()
+        {
+            return PactMagic;
+        }
 
         /// <summary>
         /// A dictionary which assigns each class level the slots available to them
@@ -44,33 +65,26 @@ namespace CompendiumLibrary.src.Classes
         /// </summary>
         public Dictionary<int, int[]> SpellSlots = new(20);
 
-        public string GetSpellSlots(int level)
+        public Dictionary<int, int[]> GetSpellSlots()
         {
-            string spells = "";
-            int[] slots = SpellSlots[level];
-            for (int i = 0; i < slots.Length; i++)
-            {
-                if (slots[i] == 0)
-                    spells += "-";
-                else
-                    spells += slots[i].ToString();
-                if (i < slots.Length - 1)
-                    spells += " ";
-            }
-            return spells;
+            return SpellSlots;
         }
 
         /// <summary>
         /// A dictionary which assigns each class level the cantrips known
         /// at each level. Can just check last level for any cantrips
         /// </summary>
-        public Dictionary<int, int> CantripProjection = new(20);
+        private Dictionary<int, int> CantripProjection = new(20);
 
         /// <summary>
-        /// A dictionary which assigns each class level the spells known
-        /// at each level
+        /// Returns true if the spell casting model has at least one cantrip
         /// </summary>
-        public Dictionary<int, int> SpellsKnown = new(20);
+        /// <returns></returns>
+        public bool HasCantrips()
+        {
+            return CantripProjection.Count > 0;
+        }
+
 
         
     }

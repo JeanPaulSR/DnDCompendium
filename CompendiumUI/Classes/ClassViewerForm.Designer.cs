@@ -37,28 +37,10 @@ namespace CompendiumUI.Classes
         /// </summary>
         private void InitializeComponent()
         {
-            ClassTableGridView = new DataGridView();
             ClassViewerName = new Label();
-            ClassBaseStructure1 = new TextBox();
+            ClassTableGridView = new DataGridView();
             ((System.ComponentModel.ISupportInitialize)ClassTableGridView).BeginInit();
             SuspendLayout();
-            // 
-            // ClassTableGridView
-            // 
-            ClassTableGridView.AllowUserToAddRows = false;
-            ClassTableGridView.AllowUserToDeleteRows = false;
-            ClassTableGridView.AllowUserToResizeColumns = false;
-            ClassTableGridView.AllowUserToResizeRows = false;
-            ClassTableGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            ClassTableGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            ClassTableGridView.Location = new Point(13, 13);
-            ClassTableGridView.Margin = new Padding(4);
-            ClassTableGridView.Name = "ClassTableGridView";
-            ClassTableGridView.RowHeadersVisible = false;
-            ClassTableGridView.ScrollBars = ScrollBars.None;
-            ClassTableGridView.SelectionMode = DataGridViewSelectionMode.CellSelect;
-            ClassTableGridView.Size = new Size(778, 525);
-            ClassTableGridView.TabIndex = 0;
             // 
             // ClassViewerName
             // 
@@ -70,15 +52,14 @@ namespace CompendiumUI.Classes
             ClassViewerName.TabIndex = 1;
             ClassViewerName.Text = "Class";
             // 
-            // ClassBaseStructure1
+            // ClassTableGridView
             // 
-            ClassBaseStructure1.BackColor = SystemColors.ControlDark;
-            ClassBaseStructure1.Location = new Point(13, 577);
-            ClassBaseStructure1.Multiline = true;
-            ClassBaseStructure1.Name = "ClassBaseStructure1";
-            ClassBaseStructure1.Size = new Size(779, 69);
-            ClassBaseStructure1.TabIndex = 3;
-            ClassBaseStructure1.Text = "ClassBaseStructure1";
+            ClassTableGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            ClassTableGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            ClassTableGridView.Location = new Point(12, 12);
+            ClassTableGridView.Name = "ClassTableGridView";
+            ClassTableGridView.Size = new Size(780, 150);
+            ClassTableGridView.TabIndex = 2;
             // 
             // ClassViewerForm
             // 
@@ -87,9 +68,8 @@ namespace CompendiumUI.Classes
             AutoScroll = true;
             BackColor = SystemColors.ControlDark;
             ClientSize = new Size(804, 766);
-            Controls.Add(ClassBaseStructure1);
-            Controls.Add(ClassViewerName);
             Controls.Add(ClassTableGridView);
+            Controls.Add(ClassViewerName);
             Font = new Font("Verdana", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Margin = new Padding(4);
             MinimumSize = new Size(820, 805);
@@ -101,11 +81,9 @@ namespace CompendiumUI.Classes
         }
 
         #endregion
-
-        private DataGridView ClassTableGridView;
         private Label ClassViewerName;
         private Label classBaseStructure1;
-        private TextBox ClassBaseStructure1;
+        private DataGridView ClassTableGridView;
     }
 
 }

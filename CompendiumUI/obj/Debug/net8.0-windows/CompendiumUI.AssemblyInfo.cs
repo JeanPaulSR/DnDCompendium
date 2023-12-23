@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CompendiumUI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+96ad5b9d4d09d75315d1c8012e8ba4fd97a2ad97")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+555ad788b9c2e06fc45d01e0b712290a8f1b4784")]
 [assembly: System.Reflection.AssemblyProductAttribute("CompendiumUI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CompendiumUI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
